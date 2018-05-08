@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imageView = findViewById(R.id.imageView);
         ImageLoader imageLoader = new ImageLoader();
-        imageLoader.displayImage("http://img.zcool.cn/community/013f5958c53a47a801219c772a5335.jpg@900w_1l_2o_100sh.jpg", imageView);
+        imageLoader.setUseDiskCache(true);
+        imageLoader.displayImage("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1471899315,4018987761&fm=27&gp=0.jpg", imageView);
     }
 }

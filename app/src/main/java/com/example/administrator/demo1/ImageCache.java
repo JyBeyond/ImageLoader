@@ -36,7 +36,7 @@ public class ImageCache {
         mImageCache.put(url, bitmap);
     }
 
-    public void get(String url) {
-        mImageCache.get(url);
+    public Bitmap get(String url) {
+      return   mImageCache.get(url);
     }
 }
