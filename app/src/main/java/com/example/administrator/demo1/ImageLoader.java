@@ -38,12 +38,20 @@ public class ImageLoader {
         };
     }
 
-    public void displayImage(final String url, ImageView imageView) {
+    public void displayImage(final String url, final ImageView imageView) {
         imageView.setTag(url);
         mExecutorservice.submit(new Runnable() {
             @Override
             public void run() {
                 Bitmap bitmap = downLoadImageUrl(url);
+                if (bitmap == null) {
+                    throw new NullPointerException("图片为空");
+                }
+                if (imageView.getTag().equals(url)) {
+                    imageView.setImageBitmap(bitmap);
+                }
+
+                mImageCache.put(url, bitmap);
             }
         });
     }
