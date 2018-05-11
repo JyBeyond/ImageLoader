@@ -14,6 +14,6 @@ public class MainActivity extends AppCompatActivity {
         imageView = findViewById(R.id.imageView);
         ImageLoader imageLoader = new ImageLoader();
         imageLoader.setUseDiskCache(true);
-        imageLoader.displayImage("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1471899315,4018987761&fm=27&gp=0.jpg", imageView);
+        imageLoader.displayImage("http://imgsrc.baidu.com/imgad/pic/item/34fae6cd7b899e51fab3e9c048a7d933c8950d21.jpg", imageView);
     }
 }
